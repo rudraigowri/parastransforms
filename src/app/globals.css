@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+@theme {
+  --color-plum: #351447;
+  --color-plum-deep: #230c30;
+  --color-magenta: #8f2d72;
+  --color-gold: #d8b56d;
+  --color-gold-light: #e9cf94;
+  --color-gold-dark: #c49a4e;
+  --color-ivory: #fff8f0;
+  --color-mauve: #f3e5f1;
+  --color-rose: #e8c7d9;
+  --color-coral: #d9707a;
+  --color-charcoal: #2e2e2e;
+  --color-grey: #f7f5f7;
+
+  --breakpoint-tablet: 48rem;
+  --breakpoint-md: 56.25rem;
+
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --shadow-card: 0 8px 24px rgb(53 20 71 / 0.08);
+  --shadow-card-hover: 0 14px 32px rgb(53 20 71 / 0.14);
+  --shadow-cta: 0 6px 18px rgb(216 181 109 / 0.35);
+  --shadow-cta-hover: 0 12px 28px rgb(216 181 109 / 0.45);
+
+  --animate-rise: rise 0.8s var(--ease-soft) both;
+  --animate-write: write 1.1s var(--ease-soft) both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+  }
+
+  @keyframes write {
+    from {
+      clip-path: inset(-25% 110% -25% -10%);
+    }
+    to {
+      clip-path: inset(-25% -10% -25% -10%);
+    }
+  }
+}
+
+/* --font-head and --font-body are read where they are used, so a section can swap them (see font-classic). */
+:root {
+  --font-head: var(--font-fraunces), Georgia, serif;
+  --font-body: var(--font-manrope), system-ui, sans-serif;
+}
+
+@theme inline {
+  --font-heading: var(--font-head);
+  --font-script: var(--font-great-vibes), cursive;
+  --font-sans: var(--font-body);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-ivory);
+    color: var(--color-charcoal);
+    font-family: var(--font-body);
+    line-height: 1.7;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-head);
+    color: var(--color-plum);
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-rose);
+    color: var(--color-plum);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-delay: 0ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility container-page {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+  padding-left: max(1.5rem, env(safe-area-inset-left));
+  padding-right: max(1.5rem, env(safe-area-inset-right));
+
+  @media (width < 25rem) {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+}
+
+/* Scroll reveal: content stays visible without JS; the html.js class opts in. */
+@utility reveal {
+  transition:
+    opacity 0.6s var(--ease-soft),
+    transform 0.6s var(--ease-soft);
+
+  :root.js &[data-visible="false"] {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+@utility brush-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1.6s var(--ease-soft);
+
+  :root.js [data-visible="false"] > & {
+    stroke-dashoffset: 1;
+  }
+}
+
+@utility section-y {
+  padding-block: 4rem;
+
+  @media (width >= 56.25rem) {
+    padding-block: 6rem;
+  }
+}
+
+/* Original Playfair + Montserrat pairing, kept for the homepage hero. */
+@utility font-classic {
+  --font-head: var(--font-playfair), Georgia, serif;
+  --font-body: var(--font-montserrat), system-ui, sans-serif;
+  font-family: var(--font-body);
+}
+
+@utility eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@utility bg-velvet {
+  background-color: var(--color-plum);
+  background-image:
+    radial-gradient(ellipse 70% 60% at 72% 38%, rgb(143 45 114 / 0.55) 0%, transparent 70%),
+    radial-gradient(ellipse 120% 90% at 50% 50%, transparent 55%, rgb(20 6 28 / 0.55) 100%);
+}
+
+@utility bg-gold-sheen {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-gold-light) 0%,
+    var(--color-gold) 50%,
+    var(--color-gold-dark) 100%
+  );
+}
