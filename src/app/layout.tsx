@@ -3,6 +3,7 @@ import { Fraunces, Great_Vibes, Manrope, Montserrat, Playfair_Display } from "ne
 import { Footer } from "@/components/Footer";
 import { MobileCta } from "@/components/MobileCta";
 import { Navbar } from "@/components/Navbar";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </main>
         <Footer />
         <MobileCta />
+        <WhatsAppButton />
       </body>
     </html>
   );

@@ -10,6 +10,7 @@ export const site = {
   // TODO: add real contact details before launch. Empty values hide the related UI.
   email: "",
   bookingUrl: "",
+  whatsapp: "https://wa.me/919779340819",
   social: [
     { label: "Instagram", href: "https://www.instagram.com/pparashar23" },
     { label: "YouTube", href: "https://www.youtube.com/@parastransforms" },
