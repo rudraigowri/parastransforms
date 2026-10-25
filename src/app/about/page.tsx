@@ -17,7 +17,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Paras Parashar"
+        eyebrow="About Us"
         title={
           <>
             You are not <Script>your past.</Script>
