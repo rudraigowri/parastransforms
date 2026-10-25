@@ -1,3 +1,8 @@
+// Pre-filled text the visitor sends when opening the chat.
+const whatsapp = `https://wa.me/919779340819?text=${encodeURIComponent(
+  "Hi Paras, I found you through the ParasTransforms website and would love to know more about your coaching.",
+)}`;
+
 export const site = {
   name: "ParasTransforms",
   tagline: "Unleash Your Inner You",
@@ -10,12 +15,12 @@ export const site = {
   // TODO: add real contact details before launch. Empty values hide the related UI.
   email: "",
   bookingUrl: "",
-  whatsapp: "https://wa.me/919779340819",
+  whatsapp,
   social: [
     { label: "Instagram", href: "https://www.instagram.com/pparashar23" },
     { label: "YouTube", href: "https://www.youtube.com/@parastransforms" },
     { label: "Facebook", href: "https://www.facebook.com/share/1E1mxy1ygy/" },
-    { label: "WhatsApp", href: "https://wa.me/919779340819" },
+    { label: "WhatsApp", href: whatsapp },
   ] as { label: string; href: string }[],
 };
 
