@@ -29,6 +29,6 @@ src/
 ## Before launch
 
 - **Photos:** `src/assets/images/paras-*.jpg` are low-resolution crops from the design mockup. Replace them with real photography, keeping the same file names.
-- **Contact:** set `email` and/or `bookingUrl` in `src/content/site.ts`. While both are empty, the Contact page says booking opens soon.
+- **Contact:** set `email` and/or `bookingUrl` in `src/content/site.ts`. While both are empty, the "Book" buttons open a WhatsApp chat with a booking message.
 - **Site URL:** set `NEXT_PUBLIC_SITE_URL` (used for metadata, sitemap and robots).
 - **Testimonials / blog:** add entries to `src/content/testimonials.ts` and `src/content/posts.ts`. Each page shows a placeholder while its list is empty.

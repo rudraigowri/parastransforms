@@ -1,3 +1,4 @@
+import { site } from "@/content/site";
 import { ButtonLink } from "./Button";
 import { GoldLeaf } from "./icons";
 import { BrushCircle, Reveal } from "./motion";
@@ -18,7 +19,7 @@ export function FinalCta() {
           <p className="mx-auto mt-5 max-w-[46ch] text-ivory/80">
             Your past may be a part of your story, but it doesn&rsquo;t have to write the rest of it.
           </p>
-          <ButtonLink href="/contact" arrow className="mt-9">
+          <ButtonLink href={site.booking} arrow className="mt-9">
             Book Your Discovery Call
           </ButtonLink>
         </Reveal>

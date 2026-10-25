@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { headerLinks } from "@/content/site";
+import { headerLinks, site } from "@/content/site";
 import { ButtonLink } from "./Button";
 import { Logo } from "./Logo";
 
@@ -95,7 +95,7 @@ export function Navbar() {
             ))}
           </ul>
           <div className="hidden md:block">
-            <ButtonLink href="/contact" size="sm">
+            <ButtonLink href={site.booking} size="sm">
               Book a Call
             </ButtonLink>
           </div>
@@ -148,13 +148,15 @@ export function Navbar() {
             ))}
           </ul>
           <div className="container-page mt-auto pt-10 pb-[max(2.5rem,env(safe-area-inset-bottom))]">
-            <Link
-              href="/contact"
+            <a
+              href={site.booking}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={close}
               className="flex min-h-13 w-full items-center justify-center rounded-full bg-gold-sheen font-semibold text-plum shadow-cta"
             >
               Book Your Discovery Call
-            </Link>
+            </a>
           </div>
         </div>
       )}

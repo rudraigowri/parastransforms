@@ -30,7 +30,7 @@ export const posts: Post[] = [
     excerpt:
       "Love should not require you to abandon your dignity, silence your needs, or give up your entire identity.",
     category: "Relationships",
-    date: "2026-10-24",
+    date: "2026-10-10",
     body: loveOrFear,
   },
   {
@@ -39,7 +39,7 @@ export const posts: Post[] = [
     excerpt:
       "Confidence doesn't always arrive before action. Sometimes, it develops because we act despite feeling uncertain.",
     category: "Confidence",
-    date: "2026-10-24",
+    date: "2026-09-26",
     body: confidence,
   },
   {
@@ -47,7 +47,7 @@ export const posts: Post[] = [
     title: "You Are Not Worth Less Just Because Someone Failed to Value You",
     excerpt: "Sometimes, the fear of losing someone makes us lose touch with ourselves.",
     category: "Self-Worth",
-    date: "2026-10-24",
+    date: "2026-09-12",
     body: selfWorth,
   },
 ];

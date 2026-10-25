@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ShieldCheck, Users } from "lucide-react";
 import heroPortrait from "@/assets/images/paras-hero.jpg";
+import { site } from "@/content/site";
 import { ButtonLink } from "../Button";
 import { Lotus } from "../icons";
 import { BrushCircle } from "../motion";
@@ -41,7 +42,7 @@ export function Hero() {
             clarity and purpose.
           </p>
           <div className="mt-8 flex animate-rise flex-col gap-3 [animation-delay:400ms] sm:flex-row tablet:flex-col lg:flex-row lg:gap-4">
-            <ButtonLink href="/contact" arrow>
+            <ButtonLink href={site.booking} arrow>
               Book Your Discovery Call
             </ButtonLink>
             <ButtonLink href="/about" variant="outline">

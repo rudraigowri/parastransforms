@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { site } from "@/content/site";
 import { Arrow } from "./Button";
 
 // Distance from the page bottom where the closing CTA and footer take over.
@@ -37,13 +37,15 @@ export function MobileCta() {
         visible ? "translate-y-0" : "translate-y-full"
       }`}
     >
-      <Link
-        href="/contact"
+      <a
+        href={site.booking}
+        target="_blank"
+        rel="noopener noreferrer"
         className="group flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-gold-sheen text-[0.9375rem] font-semibold text-plum shadow-cta"
       >
         Book Your Discovery Call
         <Arrow />
-      </Link>
+      </a>
     </div>
   );
 }

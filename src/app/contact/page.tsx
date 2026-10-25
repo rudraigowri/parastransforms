@@ -18,8 +18,6 @@ const steps = [
 ];
 
 export default function ContactPage() {
-  const hasContact = Boolean(site.email || site.bookingUrl);
-
   return (
     <>
       <PageHero
@@ -49,11 +47,9 @@ export default function ContactPage() {
                 </li>
               ))}
             </ol>
-            {site.bookingUrl && (
-              <ButtonLink href={site.bookingUrl} arrow className="mt-10">
-                Choose a Time
-              </ButtonLink>
-            )}
+            <ButtonLink href={site.booking} arrow className="mt-10">
+              {site.bookingUrl ? "Choose a Time" : "Book on WhatsApp"}
+            </ButtonLink>
           </Reveal>
 
           <Reveal delay={100} className="rounded-2xl bg-grey p-6 shadow-card sm:p-10">
@@ -67,13 +63,9 @@ export default function ContactPage() {
               </>
             ) : (
               <>
-                <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] leading-tight">Booking opens soon</h2>
+                <h2 className="text-[clamp(1.75rem,3vw,2.25rem)] leading-tight">Reach out to Us</h2>
                 <p className="mt-3 text-charcoal/80">
-                  {hasContact
-                    ? "Use the button alongside to choose a time that suits you."
-                    : site.social.length > 0
-                      ? "In the meantime, you can reach out on social media."
-                      : "Contact details are being finalised. Please check back shortly."}
+                  Use the button alongside to book your call, or connect with us on any of these channels.
                 </p>
                 {site.social.length > 0 && (
                   <ul className="mt-6 flex flex-wrap gap-3">

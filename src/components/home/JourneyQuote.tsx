@@ -5,7 +5,7 @@ import { Reveal } from "../motion";
 
 const journeys = [
   { Art: Sprout, title: ["Heal", "Your Past"] },
-  { Art: OpenArms, title: ["Proven", "Confidence"] },
+  { Art: OpenArms, title: ["Proven", "to Gain"] },
   { Art: Stones, title: ["Find", "Balance"] },
   { Art: Journal, title: ["Create", "Your Next Chapter"] },
 ];

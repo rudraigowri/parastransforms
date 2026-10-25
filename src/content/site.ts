@@ -2,6 +2,10 @@
 const whatsapp = `https://wa.me/919779340819?text=${encodeURIComponent(
   "Hi Paras, I found you through the ParasTransforms website and would love to know more about your coaching.",
 )}`;
+const whatsappBooking = `https://wa.me/919779340819?text=${encodeURIComponent(
+  "Hi Paras, I'd like to book a discovery call. Please let me know a time that works for you.",
+)}`;
+const bookingUrl = "";
 
 export const site = {
   name: "ParasTransforms",
@@ -14,7 +18,9 @@ export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
   // TODO: add real contact details before launch. Empty values hide the related UI.
   email: "",
-  bookingUrl: "",
+  bookingUrl,
+  // Where every "Book" button points: the scheduling link once set, WhatsApp until then.
+  booking: bookingUrl || whatsappBooking,
   whatsapp,
   social: [
     { label: "Instagram", href: "https://www.instagram.com/pparashar23" },
