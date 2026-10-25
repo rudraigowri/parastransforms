@@ -8,7 +8,7 @@ import { PageHero } from "@/components/PageHero";
 import { Script } from "@/components/Script";
 
 export const metadata: Metadata = {
-  title: "About Paras",
+  title: "About Us",
   description:
     "Paras Parashar is a Human Potential Expert and Confidence Architect helping people move beyond guilt, regret and self-doubt.",
 };
