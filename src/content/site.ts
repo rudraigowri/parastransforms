@@ -10,7 +10,11 @@ export const site = {
   // TODO: add real contact details before launch. Empty values hide the related UI.
   email: "",
   bookingUrl: "",
-  social: [] as { label: string; href: string }[],
+  social: [
+    { label: "Instagram", href: "https://www.instagram.com/pparashar23" },
+    { label: "YouTube", href: "https://www.youtube.com/@parastransforms" },
+    { label: "Facebook", href: "https://www.facebook.com/share/1E1mxy1ygy/" },
+  ] as { label: string; href: string }[],
 };
 
 export const navLinks = [

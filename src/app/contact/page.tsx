@@ -71,8 +71,21 @@ export default function ContactPage() {
                 <p className="mt-3 text-charcoal/80">
                   {hasContact
                     ? "Use the button alongside to choose a time that suits you."
-                    : "Contact details are being finalised. Please check back shortly."}
+                    : site.social.length > 0
+                      ? "In the meantime, you can reach out on social media."
+                      : "Contact details are being finalised. Please check back shortly."}
                 </p>
+                {site.social.length > 0 && (
+                  <ul className="mt-6 flex flex-wrap gap-3">
+                    {site.social.map((item) => (
+                      <li key={item.href}>
+                        <ButtonLink href={item.href} variant="accent" size="sm">
+                          {item.label}
+                        </ButtonLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </>
             )}
           </Reveal>
