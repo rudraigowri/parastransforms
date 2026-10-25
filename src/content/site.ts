@@ -14,6 +14,7 @@ export const site = {
     { label: "Instagram", href: "https://www.instagram.com/pparashar23" },
     { label: "YouTube", href: "https://www.youtube.com/@parastransforms" },
     { label: "Facebook", href: "https://www.facebook.com/share/1E1mxy1ygy/" },
+    { label: "WhatsApp", href: "https://wa.me/919779340819" },
   ] as { label: string; href: string }[],
 };
 
